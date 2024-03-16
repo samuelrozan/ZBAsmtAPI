@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "73a173bd-15db-4144-826d-99394a8a182e",
+		"name": "ZooBookAssesmentAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33651862"
+	},
+	"item": [
+		{
+			"name": "GetEmployees List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49848/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49848",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49848/api/employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49848",
+					"path": [
+						"api",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post from Body",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"id\":1,\r\n    \"FirstName\":\"Rojan\",\r\n    \"MiddleName\":\"Thomas\",\r\n    \"LastName\":\"Samuel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49848/api/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49848",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"FirstName\":\"Rojan\",\r\n    \"MiddleName\":\"Thomas\",\r\n    \"LastName\":\"Samuel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:49848/api/employees?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49848",
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:49848/api/employees?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "49848",
+					"path": [
+						"api",
+						"employees"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
